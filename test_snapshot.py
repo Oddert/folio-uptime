@@ -13,4 +13,4 @@ def test_folio_site_against_snapshot(snapshot):
 	with urllib.request.urlopen('https://robynveitch.com/') as response:
 		assert response.status == 200
 		html = response.read().decode('utf-8')
-		snapshot.assert_match(html, 'site_output.txt')
+		snapshot.assert_match(html, 'robynveitchcom_output.txt')
